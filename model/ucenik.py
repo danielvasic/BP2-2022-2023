@@ -1,5 +1,7 @@
 from . import Base
 from model.razred import Razred
+from model.ocjena import Ocjena
+from model.izostanak import Izostanak
 
 from sqlalchemy import *
 from sqlalchemy.orm import relationship
@@ -11,4 +13,5 @@ class Ucenik (Base):
 
     razred = relationship("Razred", back_populates="ucenici")
     ocjene = relationship("Ocjena", back_populates="ucenik")
+    izostanci = relationship("Izostanak", back_populates="ucenik")
     
