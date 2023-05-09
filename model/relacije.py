@@ -7,6 +7,8 @@ from .predmet import Predmet
 from .nastavnik import Nastavnik
 from .raspored import Raspored
 from .ocjena import Ocjena
+from . import Base
+from . import engine
 
 Ucenik.razred = relationship("Razred", back_populates="ucenici")
 Ucenik.ocjene = relationship("Ocjena", back_populates="ucenik")
@@ -20,3 +22,6 @@ Predmet.ocjene = relationship("Ocjena", back_populates="predmet")
 Ocjena.ucenik = relationship("Ucenik", back_populates="ocjene")
 Ocjena.predmet = relationship("Predmet", back_populates="ocjene") 
 Nastavnik.sati = relationship("Raspored", back_populates = "nastavnik")
+
+Base.metadata.bind = engine
+Base.metadata.create_all()
