@@ -2,4 +2,5 @@ flask
 PyMySQL
 sqlalchemy
 redis
-confluent-kafka
+dogpile.cache
+kafka-python
