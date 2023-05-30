@@ -24,4 +24,4 @@ Ocjena.predmet = relationship("Predmet", back_populates="ocjene")
 Nastavnik.sati = relationship("Raspored", back_populates = "nastavnik")
 
 Base.metadata.bind = engine
-Base.metadata.create_all()
+Base.metadata.create_all(bind=engine)

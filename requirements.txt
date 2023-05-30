@@ -1,0 +1,5 @@
+flask
+PyMySQL
+sqlalchemy
+redis
+confluent-kafka
