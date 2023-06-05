@@ -22,7 +22,6 @@ producer = KafkaProducer(
 @app.route("/")
 def index ():
     classes = session.query(Razred).all()
-    '''    
     consumer = KafkaConsumer(
         'razred',
         bootstrap_servers=['kafka:9092'],
@@ -34,21 +33,18 @@ def index ():
        for message in consumer:
             razred = message.value
             yield razred
-    '''
 
-    return render_template('classes.html', classes=classes, stream=[])
+    return stream_template('classes.html', classes=classes, stream=consume_classes())
 
 @app.route("/classes/delete/<int:id_razreda>", methods=["DELETE"])
 def delete_class(id_razreda):
     # ID se sada prenosi putem URL-a
-
     # Dohvati objekt Razred sa navedenim ID-om
     razred = session.query(Razred).get(id_razreda)
 
     if razred:  # ako Razred s ovim ID-om postoji
         session.delete(razred)
         session.commit()
-
         # Uspješno izbrisano
         return jsonify({'message': f'Razred sa ID {id_razreda} je izbrisan.'}), 200
     else:
@@ -62,7 +58,6 @@ def get_class(id_razreda):
         creator=lambda: session.query(Razred).get(id_razreda),
         expiration_time=60  # The time after which to expire the cache
     )
-
     if razred:
         # pretvoriti objekt Razred u rječnik
         # Uspješno dohvaćeno
@@ -80,7 +75,6 @@ def edit_class():
     if id_razreda:  
         # Dohvati objekt Razred sa navedenim ID-om
         razred = session.query(Razred).get(id_razreda)
-
         if razred:  # ako Razred s ovim ID-om postoji
             # Ažurirati atribute objekta Razred
             if godina: 
@@ -88,7 +82,6 @@ def edit_class():
             if odjeljenje: 
                 razred.odjeljenje = odjeljenje
             session.commit()
-
             # Uspješno ažurirano
             return jsonify({'message': f'Razred sa ID {id_razreda} je ažuriran.'}), 200
         else:
@@ -97,7 +90,6 @@ def edit_class():
     else:
         # Nije pružen ID
         return jsonify({'message': 'ID nije pružen.'}), 400
-
 
 @app.route("/classes/add", methods=["POST"])
 def add_class():
