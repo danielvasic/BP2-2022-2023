@@ -17,4 +17,11 @@ Za pokretanje aplikacije lokalno sve što je potrebno je pokrenuti sljedeću nar
 ```
 docker compose up --build
 ```
-Pripaziti prilikom pokretanja na atribut `platform: linux/x86_64` u `docker-compose.yaml` datoteci ukoliko pokrećete na **Windows** operacijskom sustvu ukloniti ovaj atribut iz YAML datoteke.
+Napomena: Pripaziti prilikom pokretanja na atribut `platform: linux/x86_64` u `docker-compose.yaml` datoteci ukoliko pokrećete na **Windows** operacijskom sustvu ukloniti ovaj atribut iz YAML datoteke.
+
+
+Relacijski model baze podataka implementiran u SQLAlchemy programskom okruženju:
+
+![ERD](erd.png)
+
+Aplikacija kroz MySQL bazu podataka osigurava trajnost podataka, a kroz Redis sustav osigurava cache-ing za brzo dohvaćanje podataka. Za komunikaciju u stvarnom vremenu korištena je Kafka.
