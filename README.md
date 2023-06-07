@@ -6,6 +6,9 @@
 
 Dobro došli u repozitorij vježbi za kolegij **Baze podataka 2**. Ovaj kolegij se izvodi na Fakultetu prirodoslovno-matematičkih i odgojnih znanosti Sveučilišta u Mostaru. Studijski program očekuje od studenata da se upuste u učenje i istraživanje naprednih koncepta razvoja web aplikacija, koristeći niz modernih tehnologija, uključujući:
 
-- Razvoj sustava baziranih na web tehnologijama za upravljanje podacima u bazi podataka
-- Korištenje Docker tehnologije
-- Razvoj aplikacija korištenjem Docker platforme
+- Razvoj sustava baziranih na web tehnologijama za upravljanje podacima u bazi podataka,
+- Korištenje Docker tehnologije,
+- Razvoj aplikacija korištenjem Docker platforme,
+- Korištenje JQuery i Flask tehnologija z rad sa podacima u stvarnom vremenu,
+- Korištenje Kafka i Redis za uspješnu komunikaciju i smanjenje opterećenja sustav.
+
