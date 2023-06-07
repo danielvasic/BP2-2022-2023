@@ -17,3 +17,4 @@ Za pokretanje aplikacije lokalno sve što je potrebno je pokrenuti sljedeću nar
 ```
 docker compose up --build
 ```
+Pripaziti prilikom pokretanja na atribut `platform: linux/x86_64` u `docker-compose.yaml` datoteci ukoliko pokrećete na **Windows** operacijskom sustvu ukloniti ovaj atribut iz YAML datoteke.
