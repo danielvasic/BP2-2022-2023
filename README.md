@@ -12,3 +12,8 @@ Dobro došli u repozitorij vježbi za kolegij **Baze podataka 2**. Ovaj kolegij 
 - Korištenje JQuery i Flask tehnologija z rad sa podacima u stvarnom vremenu,
 - Korištenje Kafka i Redis za uspješnu komunikaciju i smanjenje opterećenja sustav.
 
+Za pokretanje aplikacije lokalno sve što je potrebno je pokrenuti sljedeću naredbu:
+
+```
+docker compose up --build
+```
