@@ -9,8 +9,8 @@ Dobro došli u repozitorij vježbi za kolegij **Baze podataka 2**. Ovaj kolegij 
 - Razvoj sustava baziranih na web tehnologijama za upravljanje podacima u bazi podataka,
 - Korištenje Docker tehnologije,
 - Razvoj aplikacija korištenjem Docker platforme,
-- Korištenje JQuery i Flask tehnologija z rad sa podacima u stvarnom vremenu,
-- Korištenje Kafka i Redis za uspješnu komunikaciju i smanjenje opterećenja sustav.
+- Korištenje JQuery i Flask tehnologija za rad s podacima u stvarnom vremenu,
+- Korištenje Kafka i Redis za uspješnu komunikaciju i smanjenje opterećenja na sustav.
 
 Za pokretanje aplikacije lokalno sve što je potrebno je pokrenuti sljedeću naredbu:
 
