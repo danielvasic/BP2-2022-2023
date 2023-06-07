@@ -6,3 +6,4 @@ dogpile.cache
 kafka-python
 flask-socketio
 flask_cors
+cryptography
