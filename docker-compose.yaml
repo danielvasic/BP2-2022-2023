@@ -20,7 +20,7 @@ services:
     networks:
       - bpnet
   mysql:
-    image: mysql
+    image: mysql:8.0
     container_name: mysql
     environment:
       - MYSQL_DATABASE=ednevnik
